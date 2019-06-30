@@ -2,6 +2,12 @@
 实现一个简单的微信消息流组件。只有读取，没有写入。  
 项目脚手架用create-react-app简单搭建。
 
+### 运行
+```bash
+1. 执行yarn
+2. 执行yarn start
+```
+
 ### 设计思路  
 <img width="600" src="./Bubble图.png" />  
 

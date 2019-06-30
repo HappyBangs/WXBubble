@@ -1,0 +1,66 @@
+$avatarWidth: 40px;
+
+.talk-container {
+  display: flex;
+  margin-left: -5px;
+  margin-right: -5px;
+  &.is-mine {
+    flex-direction: row-reverse;
+    .bubble-content-wrapper {
+      align-items: flex-end;
+    }
+    .bubble-content {
+      background: rgb(178, 226, 129);
+      border-color: rgb(178, 226, 129);
+      &:after {
+        border-left-width: 4px;
+        border-left-color: inherit;
+        right: -10px;
+      }
+    }
+  }
+  &:not(.is-mine) {
+    .bubble-content {
+      background: #FFF;
+      border-color: #FFF;
+      &:after {
+        border-right-width: 4px;
+        border-right-color: inherit;
+        left: -10px;
+      }
+    }
+  }
+  .avatar-img {
+    display: block; // 底部空白
+    width: $avatarWidth;
+    height: $avatarWidth;
+    border-radius: 2px;
+    margin: 0 5px;
+  }
+  .bubble-content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .nick-name {
+    margin: -2px 8px 2px 8px;
+    font-size: 12px;
+    line-height: 1;
+    color: rgb(79, 79, 79);
+  }
+  .bubble-content {
+    flex: 1;
+    position: relative;
+    margin: 0 5px;
+    border-radius: 4px;
+    white-space: normal;
+    word-break: break-all;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 14px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: transparent;
+    }
+  }
+}
